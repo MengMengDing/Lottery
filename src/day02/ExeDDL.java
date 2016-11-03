@@ -25,7 +25,7 @@ public class ExeDDL {
         Statement stmt = null;
         //定义sql语句
         String sql = "create table user(userid int primary key auto_increment," +
-                "usercode varchar(20),username varchar(15),password varchar(30),flag int)";
+                "usercode varchar(20),username varchar(15),password varchar(30),flag int,password varchar(512))";
 
         try {
             //获取Statement对象
