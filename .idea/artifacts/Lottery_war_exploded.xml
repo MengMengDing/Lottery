@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Lottery:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Lottery_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Lottery/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Lottery" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

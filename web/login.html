@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <META content="IE=11.0000" http-equiv="X-UA-Compatible">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <TITLE>登录页面</TITLE>
+    <SCRIPT src="js/jquery-1.9.1.min.js" type="text/javascript"></SCRIPT>
+    <link href="css/login.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript">
+        $(function(){
+            //得到焦点
+            var password = $("#password");
+            var left_hand_j = $("#left_hand");
+            var right_hand_j = $("#right_hand");
+            password.focus(function(){
+                left_hand_j.animate({
+                    left: "150",
+                    top: " -38"
+                },{step: function(){
+                    if(parseInt(left_hand_j.css("left"))>140){
+                        left_hand_j.attr("class","left_hand");
+                    }
+                }}, 2000);
+
+                right_hand_j.animate({
+                    right: "-64",
+                    top: "-38px"
+                },{step: function(){
+                    if(parseInt(right_hand_j.css("right"))> -70){
+                        right_hand_j.attr("class","right_hand");
+                    }
+                }}, 2000);
+            });
+            //失去焦点
+            password.blur(function(){
+                var left_hand_jq = $("#left_hand");
+                var right_hand_jq = $("#right_hand");
+                left_hand_jq.attr("class","initial_left_hand");
+                left_hand_jq.attr("style","left:100px;top:-12px;");
+                right_hand_jq.attr("class","initial_right_hand");
+                right_hand_jq.attr("style","right:-112px;top:-12px");
+            });
+        });
+    </script>
+
+    <META name="GENERATOR" content="MSHTML 11.00.9600.17496">
+</head>
+<body>
+<div class="top_div"></div>
+<div style="background: rgb(255, 255, 255); margin: -100px auto auto; border: 1px solid rgb(231, 231, 231); border-image: none; width: 400px; height: 200px; text-align: center;">
+    <div style="width: 165px; height: 96px; position: absolute;">
+        <div class="tou"></div>
+        <div class="initial_left_hand" id="left_hand"></div>
+        <div class="initial_right_hand" id="right_hand"></div>
+    </div>
+    <p style="padding: 30px 0 10px; position: relative;">
+        <span class="u_logo"></span>
+        <input class="ipt" type="text" placeholder="请输入用户名或邮箱" value="">
+    </p>
+    <p style="position: relative;">
+        <span class="p_logo"></span>
+        <input class="ipt" id="password" type="password" placeholder="请输入密码" value="">
+    </p>
+    <div style="height: 50px; line-height: 50px; margin-top: 30px; border-top: 1px solid rgb(231, 231, 231);">
+        <p style="margin: 0 35px 20px 45px;">
+            <span style="float: left;">
+            <a style="color: rgb(204, 204, 204);" href="#">忘记密码?</a>
+            </span>
+            <span style="float: right;">
+                <a style="color:rgb(0, 142, 173); padding: 7px 10px; border-radius: 4px; border: 1px solid rgb(26, 117, 152); border-image: none; ; font-weight: bold;margin-right: 10px;" href="model/register.html">注册</a>
+              <a style="background: rgb(0, 142, 173); padding: 7px 10px; border-radius: 4px; border: 1px solid rgb(26, 117, 152); border-image: none; color: rgb(255, 255, 255); font-weight: bold;"
+                 href="#">登录</a>
+           </span>
+        </p>
+    </div>
+</div>
+<div style="text-align:center;">
+   
+</div>
+</body>
+</html>
